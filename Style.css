@@ -89,3 +89,19 @@ footer p {
 .features div {
   margin: 20px;
 }
+.plan {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.plan button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.pricing {
+  text-align: center;
+}
