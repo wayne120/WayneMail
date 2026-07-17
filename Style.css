@@ -105,3 +105,18 @@ footer p {
 .pricing {
   text-align: center;
 }
+.dashboard {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.dashboard h2 {
+  margin-top: 25px;
+}
+
+.dashboard button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
