@@ -30,3 +30,23 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => {
   console.log("WayneMail server started on port 3000");
 });
+nav {
+  background-color: #222;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 0;
+}
