@@ -61,3 +61,31 @@ footer {
 footer p {
   margin: 5px 0;
 }
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 45px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.features {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.features div {
+  margin: 20px;
+}
