@@ -1,33 +1,32 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px;
-}
+const http = require("http");
+const fs = require("fs");
 
-h1 {
-  font-size: 50px;
-}
+const server = http.createServer((req, res) => {
 
-p {
-  font-size: 18px;
-}
+  if (req.url === "/users") {
 
-button {
-  padding: 12px 25px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 8px;
-}
+    fs.readFile("users.json", "utf8", (err, data) => {
 
-div {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 300px;
-  border-radius: 12px;
-}
+      res.writeHead(200, {
+        "Content-Type": "application/json"
+      });
 
-ul {
-  text-align: left;
-}
+      res.end(data);
+
+    });
+
+  } else {
+
+    res.writeHead(200, {
+      "Content-Type": "text/plain"
+    });
+
+    res.end("WayneMail server is running!");
+
+  }
+
+});
+
+server.listen(3000, () => {
+  console.log("WayneMail server started on port 3000");
+});
