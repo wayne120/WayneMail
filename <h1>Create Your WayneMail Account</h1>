@@ -1,0 +1,28 @@
+<h2>Select Your Plan</h2>
+
+<div>
+  <h3>🟢 Normal</h3>
+  <p>₦200 / 7 Days</p>
+  <p>1 WayneMail email</p>
+  <a href="payment.html">
+    <button>Choose Normal</button>
+  </a>
+</div>
+
+<div>
+  <h3>🔵 Premium</h3>
+  <p>₦400 / 7 Days</p>
+  <p>More storage and faster support</p>
+  <a href="payment.html">
+    <button>Choose Premium</button>
+  </a>
+</div>
+
+<div>
+  <h3>🟣 Premium+</h3>
+  <p>₦500 / 7 Days</p>
+  <p>Largest storage and premium support</p>
+  <a href="payment.html">
+    <button>Choose Premium+</button>
+  </a>
+</div>
