@@ -50,3 +50,14 @@ nav a:hover {
 hr {
   margin: 0;
 }
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
