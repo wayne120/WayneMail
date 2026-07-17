@@ -1,26 +1,34 @@
 const http = require("http");
-const fs = require("fs");
+const { createUser } = require("./userService");
+const config = require("./config");
 
 const server = http.createServer((req, res) => {
-  if (req.url === "/") {
-    fs.readFile("index.html", (err, data) => {
-      if (err) {
-        res.writeHead(500);
-        return res.end("Server Error");
-      }
 
-      res.writeHead(200, {
-        "Content-Type": "text/html"
-      });
+  if (req.url === "/create-user") {
 
-      res.end(data);
+    const user = createUser(
+      "Normal",
+      config.plans.normal.duration
+    );
+
+    res.writeHead(200, {
+      "Content-Type": "application/json"
     });
+
+    res.end(JSON.stringify(user, null, 2));
+
   } else {
-    res.writeHead(404);
-    res.end("Page Not Found");
+
+    res.writeHead(200, {
+      "Content-Type": "text/plain"
+    });
+
+    res.end("WayneMail Server Running");
+
   }
+
 });
 
 server.listen(3000, () => {
-  console.log("WayneMail running on port 3000");
+  console.log("WayneMail started on port 3000");
 });
